@@ -1,0 +1,74 @@
+@import "bootstrap";
+@import "bootstrap-icons";
+
+$blue: #0d8af3;
+$gray-light: #ffffff;
+$gray: #dfdfdf;
+$gray-dark: #4c4c4c;
+$green: #07d3a9;
+
+.link {
+    text-decoration: none;
+    color: $gray-dark;
+    &:hover {
+        color: lighten($gray-dark, 20%);
+    }
+}
+.link-blue {
+    color: $blue;
+    text-decoration: none;
+    &:hover {
+        color: lighten($blue, 20%);
+    }
+}
+.btn-green {
+    @extend .px-4;
+    background: $green;
+    color: $gray-light;
+    margin-top: -0.25em;
+    &:hover {
+        background: lighten($green, 20%);
+        color: $gray-light;
+    }
+}
+.content {
+    background: $blue;
+    color: $gray-light;
+}
+
+body html {
+    font-family: Arial, serif;
+}
+header {
+    i {
+        margin-top: 0.4em;
+        margin-left: -2em;
+        cursor: pointer;
+    }
+    nav {
+        a {
+            @extend .link;
+            @extend .me-5;
+        }
+    }
+}
+footer {
+    background: $gray;
+    color: $gray-dark;
+    section {
+        h3 {
+            @extend .text-uppercase;
+            font-size: large;
+        }
+        a {
+            @extend .link;
+        }
+        .blue {
+            color: $blue;
+            a {
+                @extend .link-blue;
+                text-decoration: underline;
+            }
+        }
+    }
+}
